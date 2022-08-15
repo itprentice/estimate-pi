@@ -11,7 +11,7 @@ void runPiCalc(double &result, int numberOfRuns){
     double x, y, sqCount = (double)numberOfRuns, radius = 1.0;
 
     std::random_device rd;
-    std::default_random_engine gen(rd());
+    std::mt19937 gen(rd());
     std::uniform_real_distribution<double> dis(-radius, radius);
 
     for (int i = 0; i < numberOfRuns; i++){
